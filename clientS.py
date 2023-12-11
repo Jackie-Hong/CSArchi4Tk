@@ -1,4 +1,3 @@
-# client.py  Successfully installed CookieJar-0.0.3 argparse-1.4.0 arrow-1.2.3 binaryornot-0.4.4 chardet-5.0.0 cookiecutter-1.7.3 jinja2-time-0.2.0 pager-3.3 poyo-0.5.0 python-dateutil-2.8.2 python-slugify-6.1.2 text-unidecode-1.3
 import tkinter as tk
 from tkinter import simpledialog, messagebox
 import requests

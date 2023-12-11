@@ -7,15 +7,9 @@ app = Flask(__name__)
 
 # 设置密钥，用于加密 session 数据
 app.config['SECRET_KEY'] = 'your_secret_key'
-# 配置 session 存储方式，这里使用简单的基于文件的存储
-# app.config['SESSION_TYPE'] = 'filesystem'
-# Session(app)
-
 
 @app.route('/login', methods=['POST'])
 def login():
-    # user_id = request.json.get('user_id')
-    # user_id = session.get('user_id')
     user_id = request.form.get('user_id')
 
     if user_id:
@@ -31,12 +25,9 @@ def api():
     user_id = session.get('user_id')
     message = request.form.get('message')
 
-    # message = request.json.get('message')
-
     # if user_id and message:
     if user_id:
         response_data = {'user_id': user_id, 'message': message}
-        # response_data = {'user_id': user_id, 'message': "message"}
         return jsonify(response_data)
     else:
         return jsonify({'error': 'Invalid request'})
